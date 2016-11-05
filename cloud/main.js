@@ -4,6 +4,6 @@ Parse.Cloud.define('hello', function(req, res) {
 });
 
 
-Parse.Cloud.define('second', function(req, res) {
+Parse.Cloud.define('result', function(req, res) {
  res.success('こんにちは');
 });
