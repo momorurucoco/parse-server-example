@@ -5,5 +5,5 @@ Parse.Cloud.define('hello', function(req, res) {
 
 
 Parse.Cloud.define('second', function(req, res) {
- res.success(parseInt('4'));
+ res.success('4.0');
 });
