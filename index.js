@@ -31,7 +31,7 @@ var api = new ParseServer({
 	        //pfx: __dirname + '/iPhoneP12/com.arata1972.japan.spa store.p12',
 		pfx: __dirname + '/iPhoneP12/com.arata1972.japan.spa dev.p12',
 	        bundleId: 'com.arata1972.japan.spa',
-		production: false
+		//production: false
 	        //production: true
 	      }
     }
