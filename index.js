@@ -18,26 +18,31 @@ var api = new ParseServer({
 	  appId: process.env.APP_ID || 'md6b718xbdyl',
 	  masterKey: process.env.MASTER_KEY || 'eruqp70env57', //Add your master key here. Keep it secret!
 	  serverURL: process.env.SERVER_URL || 'https://japan-spa.herokuapp.com/parse',  // Don't forget to change to https if needed
-	  liveQuery: {
-	    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
-	  },
-	  // 以下為新增部分
-	  push: {
-	    // 此篇未提到 Android，因此註解掉
-	    // android: {
-	    //   senderId: '...',
-	    //   apiKey: '...'
-	    // },
-	    ios:{
-	        pfx: __dirname + '/iPhoneP12/com.arata1972.japan.spa store.p12',
-	        bundleId: 'com.arata1972.japan.spa',
-	        production: true
-	      }
-    }
-	  });
+// 	  liveQuery: {
+// 	    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
+// 	  },
+// 	  // 以下為新增部分
+// 	  push: {
+// 	    // 此篇未提到 Android，因此註解掉
+// 	    // android: {
+// 	    //   senderId: '...',
+// 	    //   apiKey: '...'
+// 	    // },
+// 	    ios:{
+// 	        pfx: __dirname + '/iPhoneP12/com.arata1972.japan.spa store.p12',
+// 	        bundleId: 'com.arata1972.japan.spa',
+// 	        production: true
+// 	      }
+//     }
+// 	  });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
 // javascriptKey, restAPIKey, dotNetKey, clientKey
+	
+	liveQuery: {
+    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
+  }
+});
 
 var app = express();
 
